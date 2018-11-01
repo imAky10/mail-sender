@@ -16,33 +16,48 @@ driver.get('https://www.google.com/')
 
 driver.find_element_by_xpath(f'//a[text() = "Gmail"]').click()
 time.sleep(2)
+
 driver.find_element_by_xpath(f'//a[text() = "Sign In"]').click()
 time.sleep(1)
+
 id_box = driver.find_element_by_xpath(f'//input[@type = "email"]')
 id_box.send_keys(sender_id)
 time.sleep(1)
+
 driver.find_element_by_id('identifierNext').click()
 time.sleep(1)
+
 pwd_box = driver.find_element_by_xpath(f'//input[@type = "password"]')
 pwd_box.send_keys(password)
 time.sleep(1)
+
 driver.find_element_by_id('passwordNext').click()
 time.sleep(1)
+
 driver.find_element_by_class_name('z0').click()
 time.sleep(1)
+
 driver.find_element_by_id(':q5').send_keys(recepient_id)
 pyautogui.keyDown('enter')
 pyautogui.keyUp('enter')
 time.sleep(1)
+
 pyautogui.keyDown('tab')
 pyautogui.keyUp('tab')
 time.sleep(1)
+
+#write the subject of mail
 driver.find_element_by_id(':pn').send_keys(subject)
 time.sleep(1)
+
 pyautogui.keyDown('tab')
 pyautogui.keyUp('tab')
 time.sleep(1)
+
+#write the content of mail
 driver.find_element_by_id(':qs').send_keys(content)
 time.sleep(1)
+
+#click the send button
 driver.find_element_by_id(':pd').click()
 
