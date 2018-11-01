@@ -10,7 +10,7 @@ subject = input("Subject : ")
 content = input("Content : ")
 
 
-driver = webdriver.Chrome("C:/Users/DELL/Downloads/chromedriver_win32/chromedriver")
+driver = webdriver.Chrome("/path/to/chromedriver")     # Enter the path to your chromedriver
 driver.get('https://www.google.com/')
 
 
